@@ -6,6 +6,14 @@ https://nicholastsmith.wordpress.com/2017/10/14/deep-learning-ocr-using-tensorfl
 https://github.com/chongyangtao/Awesome-Scene-Text-Recognition
 https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf  
  
+PyClustering library also provide K-Medoid and many other clustering algorithms(Like DBSCAN, K-Means++ etc.).
+
+LINK : https://pypi.org/project/pyclustering/
+
+INSTALL : pip install pyclustering
+
+DOCUMENTATION (Only K-Medoid) : 
+https://codedocs.xyz/annoviko/pyclustering/classpyclustering_1_1cluster_1_1kmedoids_1_1kmedoids.html
  
 ### Clustering:
 
