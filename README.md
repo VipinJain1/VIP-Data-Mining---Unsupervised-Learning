@@ -5,6 +5,9 @@ https://www.analyticsvidhya.com/blog/2015/12/10-machine-learning-algorithms-expl
 https://nicholastsmith.wordpress.com/2017/10/14/deep-learning-ocr-using-tensorflow-and-python/
 https://github.com/chongyangtao/Awesome-Scene-Text-Recognition
 https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf  
+http://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering
+http://scikit-learn.org/stable/auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py  
+
  
 PyClustering library also provide K-Medoid and many other clustering algorithms(Like DBSCAN, K-Means++ etc.).
 
@@ -187,7 +190,9 @@ Space: O(nd+Kd), order of N(d) linear.
 
 
 ## Hierarchical Clustering:
-Reference:  https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf
+Reference:  
+https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf
+http://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html#sklearn.cluster.AgglomerativeClustering http://scikit-learn.org/stable/auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py  
 
 Two types:
  Agglomerative and Divisive Clustering.
@@ -208,6 +213,14 @@ Min approach: when chose points pick points from cluster 1 and cluster 2 that ha
 Max approach: when chose points pick points from cluster 1 and cluster 2 that have max distance.
 Group Avg: Take every pair point, compute the similarity and get the average. 
 Distance between centroids.
+
+#### Limitation of Hierarchical Clustering
+1. No math objective for that, we are directly solving. K-mean - clear math objective. Hierarchical is a neat solution but does not fit into math solution.
+2. Weather I use Min, Max or Avg, all have their own limitation. Min - has outliers’ issue. max - breaks large cluster. 
+3. Most imp limitation: - cannot be used when N is large. Space and Time complexity. Space O (N2) and Time O (N2logn)
+K-means has O(nd) complexity. 
+
+
 
 
 
