@@ -166,6 +166,11 @@ Partitioning around Medoids (PAM):
   d} reassign the points. 
   e} update the points.
 
+### Determine the right K
+1. From domain knowledge.
+2. Elbow or Knee method.
+ Loss function of K means - try to minimize sum of across all K clusters, distance between ||x-ci|| square.
+We need to declare best K to calculate loss. if you draw the graph, between loss and k points, shape comes like elbow share.
 
 
 
