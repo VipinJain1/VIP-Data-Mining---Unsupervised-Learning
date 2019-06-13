@@ -101,6 +101,12 @@ Whenever we have a hard problem, solve it for approximation. This is Lloyds’s 
     Cj = 1/|Sj| Sum (Xi) ; Xi all Sjs.
  (iv) Repeat step 2 and 3, until convergence - centroids do not change much. check old with new centroids. 
 
+### How to initilize : K-Means+
+
+Llyoid's algo we did random iniltilzarion to pick k points.
+
+
+
  
     
  
