@@ -135,25 +135,36 @@ K-Means++ does gert affected by outliers.. ifd we have iassue, repeat K-Means++ 
 
 ### Limitation of k-Means:
 
-Clusters of different sizes, densities, non-globular shapes. k-emas would not work.
+Clusters of different sizes, densities, non-globular shapes. k-mesa would not work.
 Solution: increase K value, and put all together to make stable cluster, but hard job to do.  
 
 ### K-Medoids:
-Problem K-Means I have centroids c1,c2...cn. my centroids may not be interpretable.
+Problem K-Means I have centroids c1,c2...can. my centroids may not be interpretable.
 
 Example Amazon Food review:
-Each Xi represent review ( review text) using BOW. my cells might have some value that might be hard to interpret. 
+Each Xi represent review (review text) using BOW. my cells might have some value that might be hard to interpret. 
 Instead of giving me Cj's centroid using means, if you gave me X10 part of D, as the first centroid can read my review text.
 so, what if each centroid is each data point in data set 'D' so Ci = Xj :D
 This algorithm is K-medoids. very popular algorithm.
 
 Partitioning around Medoids (PAM):
-(i) Same initilazation like in Kmeans++  : pick k points from data set.
-(ii) Assignment:  sasme thing , closed medoids. If xi : Sj if medoid j is the closest medoid 
-(iii) Update/Recompute: Here is the difference.  we say, for each medoid , we 
- (a) swap each medoid point with non-medoid point.
- (b)  
-
+(i) Same initialization like in Kmeans++  : pick k points from data set.
+(ii) Assignment:  same thing, closed medoids. If xi : Sj if medoid j is the closest medoid 
+(iii) Update/Recompute: Here is the difference.  we say, for each medoid, we 
+ (a) swap each medoid point with non-medoid point if loss reduces go ahead otherwise swap again. 
+ Example we have x1,x2,...x5,x6,x7...x10
+ if I have x1 to x5 non medoid points and x6-x10 are medoid points, say swap x1 with x7.
+ 
+ so, we are trying to minimize loss function using below.
+ 
+ Minimize: Sum ( i to K) ||x-Mj||square.
+ 
+  Example we have x1, x2, x5, x6, x7...x10
+  a} compute loss function. Loss value x1=M1, x6 =m2. calculate Loss Value 1.
+  b} swap M1=x2 and M2 =x6 compute the loss value again.
+  c} lots of swaps are possible and keep recomputing loss value.
+  d} reassign the points. 
+  e} update the points.
 
 
 
