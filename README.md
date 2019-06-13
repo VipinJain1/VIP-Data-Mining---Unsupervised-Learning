@@ -80,7 +80,32 @@ D = {xq,x2,x3...xk}
 Task: K-centroids :- c1,c2,c3....ck.
 Sets : s1,s2,s3....sk.
 Constraints:  Si Intersection Sj = 0, no common points in intersection and Xi is part of Sj. so every point has to be part of any cluster.
-Task: Find c1,c2....ck. We automatically find S1,s2,...sk.
+Task: Find c1,c2....ck. We automatically find s1,s2,...sk.
+
+Minimize the intra-cluster dist.
+
+so
+AvgMin for c1,c2,c3...ck  ( Sum (I to k all clusters) * Sum ( x:si)  ||x-ci|| square)) This is NP hard problem.
+Whenever we have a hard problem, solve it for approximation. This is Lloyds’s algorithm.
+
+### Lloyd's Algorithm:
+
+(i) Initialization:
+  Pick randomly k points from D - call them centroids.
+(ii) Assignment:
+ For each point Xi, select the nearest centroid Cj ; dist. (xi, Cj) J = 1,2....k.
+
+(iii) Recompute centroid.
+   Recalculate/update Cj's as follows:
+    
+    Cj = 1/|Sj| Sum (Xi) ; Xi all Sjs.
+ (iv) Repeat step 2 and 3, until convergence - centroids do not change much. check old with new centroids. 
+
+ 
+    
+ 
+
+
 
 
 
