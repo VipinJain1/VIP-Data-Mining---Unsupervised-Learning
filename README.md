@@ -1,4 +1,12 @@
 # Data-Mining---Unsupervised-Learning
+
+Refer:
+https://www.analyticsvidhya.com/blog/2015/12/10-machine-learning-algorithms-explained-army-soldier/
+https://nicholastsmith.wordpress.com/2017/10/14/deep-learning-ocr-using-tensorflow-and-python/
+https://github.com/chongyangtao/Awesome-Scene-Text-Recognition
+https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf  
+ 
+ 
 ### Clustering:
 
 What we learnt: Classfication and Regression problem.
