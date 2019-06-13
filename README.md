@@ -180,6 +180,13 @@ Partitioning around Medoids (PAM):
  Loss function of K means - try to minimize sum of across all K clusters, distance between ||x-ci|| square.
 We need to declare best K to calculate loss. if you draw the graph, between loss and k points, shape comes like elbow share.
 
+###Time Complexity:
+
+K-means: O(nKdi)  Linear time complexity.
+Space: O(nd+Kd), order of N(d) linear.
+
+
+
 
 
 
