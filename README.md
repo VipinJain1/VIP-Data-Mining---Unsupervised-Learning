@@ -1,6 +1,6 @@
 # Data-Mining---Unsupervised-Learning
 
-Refer:
+### Refer:
 https://www.analyticsvidhya.com/blog/2015/12/10-machine-learning-algorithms-explained-army-soldier/
 https://nicholastsmith.wordpress.com/2017/10/14/deep-learning-ocr-using-tensorflow-and-python/
 https://github.com/chongyangtao/Awesome-Scene-Text-Recognition
@@ -117,11 +117,53 @@ Initialization sensitivity -> final cluster & centroids. Means how chosen initia
 
 Refer:https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf  
 
-
 (i)  Get Original Points: -> generate clusters.
 (ii) now optimal clustering. apply Lloyd ago. 
 (iii) sub-optimal clustering. different initialization, apply Lloyd algo. 
 you might get different results. Keep trying until you get stable centroids. 
+so repeat k-means multiple tikes with different initialization and pick the best clustering based on smaller intra cluster and larger inter cluster distances.
+
+### K-Means++:
+Random initilization - smart initilization.
+init in k-means: task pick c1,c2,....ck.
+(i) Pick the first centroid c1 randomly from D dataset.
+(ii) create a distribution as follows.
+  for each Xi, xi = square of dist. (Xi, to the nearest centroid); distance square of each point to the centroid for each cluster and Create distances d1, d2, dn. pick a point from D-{C1} with a prob to di.
+
+Trying to pick points that are as far as possible which has highest value of distance square of (X, nearest centroid).
+K-Means++ does gert affected by outliers.. ifd we have iassue, repeat K-Means++ n times.
+
+### Limitation of k-Means:
+
+Clusters of different sizes, densities, non-globular shapes. k-emas would not work.
+Solution: increase K value, and put all together to make stable cluster, but hard job to do.  
+
+### K-Medoids:
+Problem K-Means I have centroids c1,c2...cn. my centroids may not be interpretable.
+
+Example Amazon Food review:
+Each Xi represent review ( review text) using BOW. my cells might have some value that might be hard to interpret. 
+Instead of giving me Cj's centroid using means, if you gave me X10 part of D, as the first centroid can read my review text.
+so, what if each centroid is each data point in data set 'D' so Ci = Xj :D
+This algorithm is K-medoids. very popular algorithm.
+
+Partitioning around Medoids (PAM):
+(i) Same initilazation like in Kmeans++  : pick k points from data set.
+(ii) Assignment:  sasme thing , closed medoids. If xi : Sj if medoid j is the closest medoid 
+(iii) Update/Recompute: Here is the difference.  we say, for each medoid , we 
+ (a) swap each medoid point with non-medoid point.
+ (b)  
+
+
+
+
+
+
+
+
+  
+
+  
 
 
 
