@@ -103,7 +103,17 @@ Whenever we have a hard problem, solve it for approximation. This is Lloyds’s 
 
 ### How to initilize : K-Means+
 
-Llyoid's algo we did random iniltilzarion to pick k points.
+Lloyd’s algo we did random initialization to pick k points.
+
+Initialization sensitivity -> final cluster & centroids. Means how chosen initial data points. 
+
+Refer:https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf  
+
+
+(i)  Get Original Points: -> generate clusters.
+(ii) now optimal clustering. apply Lloyd ago. 
+(iii) sub-optimal clustering. different initialization, apply Lloyd algo. 
+you might get different results. Keep trying until you get stable centroids. 
 
 
 
