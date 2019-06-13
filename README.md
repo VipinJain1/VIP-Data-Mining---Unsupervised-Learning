@@ -186,9 +186,28 @@ K-means: O(nKdi)  Linear time complexity.
 Space: O(nd+Kd), order of N(d) linear.
 
 
+## Hierarchical Clustering:
+Reference:  https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf
 
+Two types:
+ Agglomerative and Divisive Clustering.
+ 
+### Agglomerative Clustering:
 
+It assumes each point is a cluster to itself, it takes two cluster and group together and keep doing and group all together and finally make a big cluster for all the points that are near to each other. In last stage, we have only one big cluster.
 
+The big challenge is whichever cluster is merged I need to refresh corresponding row and column on matrix. 
+
+### Divisive:
+It is just opposite of agglomerative. it tries to break large cluster into small clusters.
+Problem is -How to divide?
+
+#### How to define Inter-Cluster Similarity:
+
+Min approach: when chose points pick points from cluster 1 and cluster 2 that have min distance.
+Max approach: when chose points pick points from cluster 1 and cluster 2 that have max distance.
+Group Avg: Take every pair point, compute the similarity and get the average. 
+Distance between centroids.
 
 
 
