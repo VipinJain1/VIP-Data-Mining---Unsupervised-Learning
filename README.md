@@ -188,7 +188,6 @@ We need to declare best K to calculate loss. if you draw the graph, between loss
 K-means: O(nKdi)  Linear time complexity.
 Space: O(nd+Kd), order of N(d) linear.
 
-
 ## Hierarchical Clustering:
 Reference:  
 https://cs.wmich.edu/alfuqaha/summer14/cs6530/lectures/ClusteringAnalysis.pdf
@@ -219,6 +218,31 @@ Distance between centroids.
 2. Weather I use Min, Max or Avg, all have their own limitation. Min - has outliers’ issue. max - breaks large cluster. 
 3. Most imp limitation: - cannot be used when N is large. Space and Time complexity. Space O (N2) and Time O (N2logn)
 K-means has O(nd) complexity. 
+
+### DBSCAN Density Based Clustering:
+
+#### Measuring Density: Measure MinPts and Eps - both are hyper parameters.
+They define how DBSCan works.
+1. Density at point P defines as: number of points within a hypersphere of radius eps around p.
+2. Dense region: a hypersphere of radius eps that contains at least minpts points.  if minpts is 4 and I have points 5, then sphere has dense region. if points are 3 and minpts =4 then it is sparse region.
+#### Core point, Border point and noise point:
+
+D = {Xi}, MinPts and Eps.
+
+#### Core Point -P: if Point p has >= MinPts points in an eps radius around it. Core point 'P' always belongs to a dense region.
+#### Border point:  Point P is set to be a border point if P is not a core point, that means P has <MinPts  points in eps radius.
+ and P is part of neighborhood (Q - Core point)
+ and dist. (P, Q) <= eps.
+
+#### Noise Point: neither core or border point is called noise points.
+
+ 
+
+ 
+
+
+
+
 
 
 
