@@ -14,7 +14,7 @@ http://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeCl
 http://scikit-learn.org/stable/auto_examples/cluster/plot_agglomerative_clustering.html#sphx-glr-auto-examples-cluster-plot-agglomerative-clustering-py  
 
  
-PyClustering library also provide K-Medoid and many other clustering algorithms(Like DBSCAN, K-Means++ etc.).
+PyClustering library also provides K-Medoid and many other clustering algorithms(Like DBSCAN, K-Means++ etc.).
 
 LINK : https://pypi.org/project/pyclustering/
 
